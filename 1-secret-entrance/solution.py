@@ -16,8 +16,20 @@ def process_rotations(rotations: list[str]) -> int:
 
 def process_rotations_part2(rotations: list[str]) -> int:
     """Process rotations and count how many times dial points at 0 during rotations."""
-    # TODO: Implement part 2 solution
-    return 0
+    counter = 0
+    number = 50
+    for rotation in rotations:
+        direction = rotation[0]
+        distance = int(rotation[1:])
+        if direction == "L":
+            number = number - distance
+        else:
+            number = number + distance
+
+        counter += abs(number // 100)
+        number = number % 100
+
+    return counter
 
 
 if __name__ == "__main__":
