@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from solution import sum_invalid_ids, sum_invalid_ids_part_2
+from .solution import sum_invalid_ids, sum_invalid_ids_part_2
 
 EXAMPLE_INPUT = """11-22,95-115,998-1012,1188511880-1188511890,222220-222224,
 1698522-1698528,446443-446449,38593856-38593862,565653-565659,
@@ -21,3 +21,13 @@ def test_part1_example():
 def test_part2_example():
     """Test part 2 with the example from README.md."""
     assert sum_invalid_ids_part_2(EXAMPLE_INPUT) == 4174379265
+
+
+def test_part1_actual():
+    """Test part 1 with actual input."""
+    assert sum_invalid_ids(load_input()) == 28844599675
+
+
+def test_part2_actual():
+    """Test part 2 with actual input."""
+    assert sum_invalid_ids_part_2(load_input()) == 48778605167
