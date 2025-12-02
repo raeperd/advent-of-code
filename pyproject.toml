@@ -11,3 +11,9 @@ dev = [
     "pytest>=9.0.1",
     "ruff>=0.14.7",
 ]
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
