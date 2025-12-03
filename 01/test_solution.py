@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from .solution import process_rotations, process_rotations_part2
+from .sol import process_rotations, process_rotations_part2
 
 EXAMPLE_ROTATIONS = [
     "L68",
