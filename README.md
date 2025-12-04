@@ -17,4 +17,10 @@ Solutions for [Advent of Code 2025](https://adventofcode.com/) in Python.
 ## 03
 - finding max value, greedy might work
 - suffix constraint - when picking k items, leave room for remaining picks
-- greedy works for lex-max - highest digit first always wins 
+- greedy works for lex-max - highest digit first always wins
+
+## 04
+- variable scope matters - reset counter per cell, not per row
+- only check target cells (`@`), not all cells in grid
+- 8-direction neighbor check - tuple iteration `(di, dj)` with bounds checking
+- repeated removal - loop until no changes in a pass 
